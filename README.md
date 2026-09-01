@@ -1,11 +1,10 @@
 # Guardian of Network 🛡️
 
-An advanced AI-driven Network Threat Detection and Security Operations Center (SOC) dashboard ecosystem.
+An advanced AI-driven Network Threat Detection and Security Operations Center (SOC) dashboard.
 
-## 🚀 Projects Overview
+## 🚀 Overview
 
 - **`react-app/`**: Guardian Network SOC Dashboard built with React, Vite, Tailwind CSS, Framer Motion, and Lucide icons. Includes real-time threat intelligence, network topology visualization, AI classification, MITRE coverage matrix, and alert investigation views.
-- **`astro-app/`**: Modern Astro web application serving the network portal and threat intelligence hub.
 - **`brixela-demo/`**: Custom typography and styling assets.
 
 ---
@@ -19,14 +18,6 @@ npm install
 npm run dev
 ```
 Runs at `http://localhost:3000/`.
-
-### Astro Application
-```bash
-cd astro-app
-npm install
-npm run dev
-```
-Runs at `http://localhost:4321/`.
 
 ---
 
