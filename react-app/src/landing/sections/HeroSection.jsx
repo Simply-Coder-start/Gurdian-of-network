@@ -1,5 +1,5 @@
 import React from 'react';
-import { EnterpriseNetworkTopology } from '../components/EnterpriseNetworkTopology';
+import { LiveGlobalNetworkMap } from '../components/LiveGlobalNetworkMap';
 import { ShieldCheck, Cpu, ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
@@ -76,9 +76,9 @@ export function HeroSection() {
 
           </div>
 
-          {/* Right Column: Realistic Enterprise SOC Topology & Flow Engine */}
+          {/* Right Column: Live Global Network Map Visualization */}
           <div className="lg:col-span-7 w-full flex items-center justify-center">
-            <EnterpriseNetworkTopology />
+            <LiveGlobalNetworkMap />
           </div>
 
         </div>
