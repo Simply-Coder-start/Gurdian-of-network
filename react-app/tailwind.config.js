@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        /* Existing SOC dashboard tokens */
         canvas: '#070A0D',
         panel: '#13191F',
         surface: '#1B2025',
@@ -26,10 +27,20 @@ export default {
         errorContainer: '#93000A',
         healthy: '#4ADE80',
         tusarBlue: '#4FB3E8',
-        tusarCyan: '#80CFFF'
+        tusarCyan: '#80CFFF',
+
+        /* Landing page design tokens */
+        ink: '#0A0D12',
+        surfaceLanding: '#12171F',
+        hairline: '#1B222B',
+        textPrimary: '#E7ECF0',
+        textSecondary: '#8B98A5',
+        calm: '#4B5A6B',
+        signal: '#FF7A45',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Consolas', 'monospace']
       }
     },

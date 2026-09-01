@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTelemetry } from './context/TelemetryContext';
 import { Sidebar } from './components/layout/Sidebar';
 import { Header } from './components/layout/Header';
@@ -12,9 +12,27 @@ import { AnalyticsIntelligenceView } from './views/AnalyticsIntelligenceView';
 import { TrafficMonitorView } from './views/TrafficMonitorView';
 import { SettingsView } from './views/SettingsView';
 import { SystemStatesView } from './views/SystemStatesView';
+import { LandingPage } from './landing/LandingPage';
 
 function App() {
   const { activeView } = useTelemetry();
+  const [showLanding, setShowLanding] = useState(true);
+
+  useEffect(() => {
+    const checkHash = () => {
+      const hash = window.location.hash;
+      setShowLanding(!hash || hash === '#' || hash === '#landing' || hash === '#hero' || hash === '#pipeline' || hash === '#detection' || hash === '#explainable-ai' || hash === '#mitre-correlation' || hash === '#dashboard-preview' || hash === '#system-health' || hash === '#privacy' || hash === '#problem' || hash === '#contact');
+    };
+
+    checkHash();
+    window.addEventListener('hashchange', checkHash);
+    return () => window.removeEventListener('hashchange', checkHash);
+  }, []);
+
+  // Landing page — full screen, no sidebar/header
+  if (showLanding) {
+    return <LandingPage />;
+  }
 
   const renderActiveView = () => {
     switch (activeView) {
